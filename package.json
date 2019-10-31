@@ -4,7 +4,7 @@
   "description": "Various Code Generators",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "plop": "plop"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/lawkai/generators#readme",
   "devDependencies": {
+    "inquirer-directory": "^2.2.0",
     "plop": "^2.5.2"
   }
 }
