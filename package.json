@@ -1,0 +1,25 @@
+{
+  "name": "generators",
+  "version": "1.0.0",
+  "description": "Various Code Generators",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lawkai/generators.git"
+  },
+  "keywords": [
+    "java",
+    "kotlin",
+    "template",
+    "gradle"
+  ],
+  "author": "Kelvin Law",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lawkai/generators/issues"
+  },
+  "homepage": "https://github.com/lawkai/generators#readme"
+}
