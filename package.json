@@ -23,7 +23,9 @@
   },
   "homepage": "https://github.com/lawkai/generators#readme",
   "devDependencies": {
-    "inquirer-directory": "^2.2.0",
     "plop": "^2.5.2"
+  },
+  "pkg": {
+      "assets": "templates/**/*"
   }
 }

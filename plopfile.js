@@ -1,19 +1,10 @@
-const promptDirectory = require('inquirer-directory')
 module.exports = function(plop) {
     plop.setActionType('echo', function(answers, config, plop) {
         console.log('You have entered: ', answers)
         return true
     });
-    plop.setPrompt('directory', promptDirectory)
     plop.setGenerator('code-gen', {
         prompts: [
-            {
-                type: 'directory',
-                basePath: '.',
-                name: 'path',
-                message: 'Please select a directory',
-                default: 'target/'
-            },
             {
                 message: 'Which template you would like to use?',
                 type: 'list',
@@ -25,25 +16,27 @@ module.exports = function(plop) {
                 message: 'What is the groupId of the project?',
                 type: 'input',
                 name: 'groupId',
-                default: 'com.github.lawkai'
+                default: 'com.github.lawkai',
+                transformer: (input) => { return plop.getHelper('dotCase')(input) }
             },
             {
                 message: 'What is the artifactId of the project?',
                 type: 'input',
-                name: 'artifactId'
+                name: 'artifactId',
+                transformer: (input) => { return plop.getHelper('dashCase')(input) }
             }
         ],
-        actions: [
-            {
-                type: 'echo'
-            },
-            {
-                type: 'addMany',
-                base: 'templates/{{template}}',
-                templateFiles: '**/*',
-                // templateFiles: 'templates/{{template}}/**/*',
-                destination: '{{path}}/{{artifactId}}'
-            }
-        ]
+        actions: (data) => {
+            return [
+                { type: 'echo' },
+                {
+                    type: 'addMany',
+                    base: 'templates/{{template}}',
+                    templateFiles: '**/*',
+                    globOptions: { dot: true },
+                    destination: './{{artifactId}}'
+                }
+            ]
+        }        
     })
 }
