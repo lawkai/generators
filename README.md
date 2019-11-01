@@ -1,6 +1,6 @@
 # Project Facade Generators
 
-This project uses [plopjs][1] to initialize project based on specific templates. 
+This project uses [plopjs][1] to create project facade based on specific templates. 
 
 ## Installation
 1. Clone this repo to a local folder
