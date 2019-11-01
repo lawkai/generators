@@ -9,8 +9,5 @@ This project is generated with a simple [Kotlin JVM][1] project template
 
 After your project has been created, please run:
 1. git init your project directory
-2. create a .gitignore file
-3. gradle wrapper to create wrapper scripts for your project
-4. add .gitattributes to ignore crlf for bat file (ex: *.bat -crlf)
 
 [1]: https://github.com/lawkai/generators/tree/master/templates/kotlin-jvm
