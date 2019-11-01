@@ -13,7 +13,7 @@ This project uses [plopjs][1] to create project facade based on specific templat
     ```
 3. Set up an alias in your bash profile or zsh profile
     ```
-    alias gen='plop --plopfile <path-to-your-generators/plopfile> --dest .'
+    alias gen='plop --plopfile <path-to-your-local-folder/plopfile.js> --dest .'
     ```
 4. Restart your terminal and then run 'gen' in any directory to create a new project based on the template.
 
