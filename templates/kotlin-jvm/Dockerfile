@@ -15,7 +15,7 @@ RUN ./gradlew clean test
 ADD src/ src/
 
 ARG version
-RUN ./gradlew -Pversion=\$version clean build uberJar
+RUN ./gradlew -Pversion=$version clean build uberJar
 
 
 FROM adoptopenjdk:8u222-b10-jre-hotspot
@@ -23,7 +23,7 @@ FROM adoptopenjdk:8u222-b10-jre-hotspot
 WORKDIR /home/app
 ARG version
 COPY --from=builder /app/build/libs/{{artifactId}}-$version-uber.jar {{artifactId}}-uber.jar
-RUN echo \$version >> version
+RUN echo $version >> version
 
 EXPOSE 8080
 
