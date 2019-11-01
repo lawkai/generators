@@ -32,7 +32,7 @@ module.exports = function(plop) {
                 {
                     type: 'addMany',
                     base: 'templates/{{template}}',
-                    templateFiles: '**/*',
+                    templateFiles: '**/!(README.md)',
                     globOptions: { dot: true },
                     destination: '{{artifactId}}'
                 }

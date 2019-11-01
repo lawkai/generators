@@ -18,9 +18,11 @@ This project uses [plopjs][1] to create project facade based on specific templat
 4. Restart your terminal and then run 'gen' in any directory to create a new project based on the template.
 
 ## Templates
-1. kotlin-jvm
+1. [kotlin-jvm][2]
    * Creates a kotlin jvm application with a simple Hello World.
-   * Uses gradle 5.6.3 and kotlin DSL
    * Based on Kotlin 1.3+ with Coroutines support.
+   * Uses gradle 5.6.3 and kotlin DSL
+   * [More...][2]
 
 [1]: https://plopjs.com
+[2]: https://github.com/lawkai/generators/tree/master/templates/kotlin-jvm
