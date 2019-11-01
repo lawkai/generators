@@ -1,4 +1,4 @@
-# Project Generators
+# Project Facade Generators
 
 This project uses [plopjs][1] to initialize project based on specific templates. 
 
@@ -11,7 +11,7 @@ This project uses [plopjs][1] to initialize project based on specific templates.
     ``` 
     npm install -g plop
     ```
-3. Set up an alias in your bash profile or zsh profile.
+3. Set up an alias in your bash profile or zsh profile
     ```
     alias gen='plop --plopfile <path-to-your-generators/plopfile> --dest .'
     ```
