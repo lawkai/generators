@@ -1,4 +1,4 @@
-## [Kotlin-JVM][1]
+## Kotlin-JVM
 
 This template uses the following:
 1. Uses Kotlin 1.3+ with Coroutines
@@ -8,4 +8,3 @@ This template uses the following:
 5. Bundle sources and documentation jars
 6. Uses Gradle Kotlin DSL (tested with gradle 5.6+)
 
-[1]: https://github.com/lawkai/generators/tree/master/templates/kotlin-jvm
