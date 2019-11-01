@@ -34,7 +34,7 @@ module.exports = function(plop) {
                     base: 'templates/{{template}}',
                     templateFiles: '**/*',
                     globOptions: { dot: true },
-                    destination: './{{artifactId}}'
+                    destination: '{{artifactId}}'
                 }
             ]
         }        
