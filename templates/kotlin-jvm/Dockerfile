@@ -25,4 +25,6 @@ ARG version
 COPY --from=builder /app/build/libs/{{artifactId}}-$version-uber.jar {{artifactId}}-uber.jar
 RUN echo $version >> version
 
+EXPOSE 8080
+
 ENTRYPOINT java -jar {{artifactId}}-uber.jar

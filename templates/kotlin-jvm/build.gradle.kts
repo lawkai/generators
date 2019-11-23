@@ -5,7 +5,7 @@ plugins {
     `maven-publish`
     application
     kotlin("jvm") version "1.3.50"
-    id("org.jetbrains.dokka") version "0.9.17"
+    id("org.jetbrains.dokka") version "0.10.0"
 }
 
 application {
@@ -24,12 +24,19 @@ dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation(("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2"))
 
-    val junit_version = "5.4.2"
-    testImplementation("org.junit.jupiter:junit-jupiter-api:$junit_version")
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:$junit_version")
-
     implementation("org.slf4j:slf4j-api:1.7.28")
     implementation("ch.qos.logback:logback-classic:1.2.3")
+
+    val http4k = "3.194.0"
+    implementation(("org.http4k:http4k-core:$http4k"))
+    implementation(("org.http4k:http4k-server-netty:$http4k"))
+
+    val micrometer = "1.3.0"
+    implementation(("io.micrometer:micrometer-core:$micrometer"))
+
+    val junit = "5.4.2"
+    testImplementation("org.junit.jupiter:junit-jupiter-api:$junit")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:$junit")
 
     testImplementation(kotlin("test"))
     testRuntimeOnly(kotlin("reflect"))
