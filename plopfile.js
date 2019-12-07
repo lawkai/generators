@@ -3,6 +3,16 @@ module.exports = function(plop) {
         console.log('You have entered: ', answers)
         return true
     });
+    plop.setActionType('cleanUpRetain', function(answers, config, plop) {
+        let fs = require("fs");
+        let files = require("glob")
+            .sync("./" + answers.artifactId + "/**/.retain");
+        files.map(f => { 
+            console.log("removing " + f);
+            fs.unlinkSync(f);
+        });
+        return true
+    });
     plop.setGenerator('code-gen', {
         prompts: [
             {
@@ -35,7 +45,8 @@ module.exports = function(plop) {
                     templateFiles: '**/!(README.md)',
                     globOptions: { dot: true },
                     destination: '{{artifactId}}'
-                }
+                },
+                { type: 'cleanUpRetain' }
             ]
         }        
     })

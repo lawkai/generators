@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/lawkai/generators#readme",
   "devDependencies": {
+    "glob": "^7.1.6",
     "plop": "^2.5.2"
-  }
+  },
+  "dependencies": {}
 }
