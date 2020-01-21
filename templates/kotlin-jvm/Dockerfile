@@ -22,9 +22,9 @@ FROM adoptopenjdk:8u222-b10-jre-hotspot
 
 WORKDIR /home/app
 ARG version
-COPY --from=builder /app/build/libs/{{artifactId}}-$version-uber.jar {{artifactId}}-uber.jar
+COPY --from=builder /app/build/libs/{{dashCase artifactId}}-$version-uber.jar {{dashCase artifactId}}-uber.jar
 RUN echo $version >> version
 
 EXPOSE 8080
 
-ENTRYPOINT java -jar {{artifactId}}-uber.jar
+ENTRYPOINT java -jar {{dashCase artifactId}}-uber.jar

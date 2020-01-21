@@ -1,4 +1,4 @@
-package {{groupId}}.{{artifactId}}
+package {{groupId}}.{{camelCase artifactId}}
 
 
 fun main() {
