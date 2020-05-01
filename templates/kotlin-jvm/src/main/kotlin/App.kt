@@ -7,7 +7,7 @@ import okhttp3.Request
 fun main(args: Array<String>) {
     runApp(args) {
         val okHttpClient = OkHttpClient()
-        get("/default") {
+        get("/") {
             val request = Request.Builder()
                 .url("https://ifconfig.me")
                 .header("User-Agent", "curl/7.64.1")
