@@ -10,12 +10,13 @@ Creates a skeleton REST service that listen on 8080 with the following endpoints
     * reports metrics of the service (e.g. CPU, RAM, Threads etc.).
 
 ### Dependencies
-1. Uses Kotlin 1.3.50 with Coroutines 1.3.2
+1. Uses Kotlin 1.3.72 with Coroutines 1.3.5
 2. Uses JUnit 5.4.2
 3. Uses Slf4j 1.7.28 and logback classic 1.2.3
 4. Uses Gradle Kotlin DSL (tested with gradle 5.6.3)
-5. Uses [Http4k with Netty][1] 3.194.0 as web server
+5. Uses [Jooby with Netty][1] 2.8.1 as web server
 6. Uses [Micrometer][2] 1.3.0 for reporting metrics
+5. Uses [OkHTTP][1] 4.6.0 as web client 
 
 ### Building and Packaging
 #### To create an uber jar

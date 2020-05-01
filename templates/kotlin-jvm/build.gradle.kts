@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     `maven-publish`
     application
-    kotlin("jvm") version "1.3.61"
+    kotlin("jvm") version "1.3.72"
     id("org.jetbrains.dokka") version "0.10.0"
 }
 
@@ -22,14 +22,18 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    implementation(("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3"))
+    implementation(("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.5"))
 
     implementation("org.slf4j:slf4j-api:1.7.28")
     implementation("ch.qos.logback:logback-classic:1.2.3")
 
-    val http4k = "3.219.0"
-    implementation(("org.http4k:http4k-core:$http4k"))
-    implementation(("org.http4k:http4k-server-netty:$http4k"))
+    val jooby = "2.8.1"
+    implementation(("io.jooby:jooby:$jooby"))
+    implementation(("io.jooby:jooby-netty:$jooby"))
+
+    val okhttp="4.6.0"
+    implementation("com.squareup.okhttp3:okhttp:$okhttp")
+
 
     val micrometer = "1.3.0"
     implementation(("io.micrometer:micrometer-core:$micrometer"))
